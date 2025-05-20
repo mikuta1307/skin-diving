@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#F5F7FA"/>
+  
+  <!-- エコノミーセットの商品 -->
+  <!-- マスク -->
+  <path d="M200 150C200 120 250 100 300 100C350 100 400 120 400 150V250C400 280 350 300 300 300C250 300 200 280 200 250V150Z" fill="#EAEAEA" stroke="#999999" stroke-width="4"/>
+  <path d="M220 150C220 130 260 115 300 115C340 115 380 130 380 150V240C380 260 340 275 300 275C260 275 220 260 220 240V150Z" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="2"/>
+  
+  <!-- スノーケル -->
+  <path d="M460 100C460 100 460 200 460 250C460 270 480 290 500 290C520 290 540 270 540 250" stroke="#999999" stroke-width="8" stroke-linecap="round"/>
+  <path d="M540 250L600 250L600 150" stroke="#999999" stroke-width="8" stroke-linecap="round"/>
+  <rect x="440" y="250" width="40" height="20" fill="#CCCCCC"/>
+  
+  <!-- フィン -->
+  <path d="M300 400C300 400 250 450 250 500C250 550 275 575 300 575C325 575 325 525 325 500V400H300Z" fill="#66CCFF" stroke="#3399CC" stroke-width="3"/>
+  <path d="M500 400C500 400 550 450 550 500C550 550 525 575 500 575C475 575 475 525 475 500V400H500Z" fill="#66CCFF" stroke="#3399CC" stroke-width="3"/>
+  <rect x="325" y="375" width="150" height="50" rx="10" fill="#EAEAEA" stroke="#999999" stroke-width="3"/>
+  
+  <!-- "エコノミーセット" ラベル -->
+  <rect x="300" y="50" width="200" height="40" rx="5" fill="#4CAF50" fill-opacity="0.7"/>
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">エコノミーセット</text>
+</svg>

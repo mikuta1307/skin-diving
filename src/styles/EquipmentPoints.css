@@ -1,0 +1,148 @@
+/* EquipmentPoints.css */
+.equipment-points {
+  background-color: var(--white);
+  padding: var(--space-xl) 0;
+}
+
+.equipment-points-header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.equipment-points-title {
+  color: var(--primary-dark);
+  margin-bottom: var(--space-md);
+}
+
+.equipment-points-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.equipment-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.equipment-point-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: var(--space-md);
+}
+
+.equipment-point-title {
+  color: var(--primary);
+  margin-bottom: var(--space-sm);
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.equipment-point-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 0.875rem;
+  margin-right: var(--space-xs);
+}
+
+.equipment-point-text {
+  color: var(--text);
+  margin-bottom: var(--space-md);
+}
+
+.equipment-point-image {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.equipment-point-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.equipment-point:hover .equipment-point-image img {
+  transform: scale(1.05);
+}
+
+.equipment-cta {
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+
+/* アニメーション */
+.equipment-point {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.equipment-point.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ディレイを付ける */
+.equipment-point:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.equipment-point:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.equipment-point:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+@media (max-width: 1199px) {
+  .equipment-points-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+  
+  .equipment-point-title {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .equipment-points-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .equipment-point {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+  
+  .equipment-point-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+  }
+  
+  .equipment-point-content {
+    flex: 1;
+  }
+  
+  .equipment-point-image {
+    display: none;
+  }
+}

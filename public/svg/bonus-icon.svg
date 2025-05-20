@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景円 -->
+  <circle cx="40" cy="40" r="35" fill="#FF9500" opacity="0.1"/>
+  <!-- プレゼントボックス -->
+  <rect x="20" y="25" width="40" height="40" rx="5" fill="#FF9500" opacity="0.3" stroke="#FF9500" stroke-width="2"/>
+  <!-- リボン -->
+  <path d="M40 25V65" stroke="#FF9500" stroke-width="3"/>
+  <path d="M20 40H60" stroke="#FF9500" stroke-width="3"/>
+  <!-- リボンの上部 -->
+  <path d="M35 15C35 15 30 20 40 25C50 20 45 15 45 15L35 15Z" fill="#FF9500"/>
+  <!-- 特典マーク -->
+  <circle cx="60" cy="20" r="12" fill="#FF9500"/>
+  <text x="60" y="25" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="white" text-anchor="middle">特</text>
+</svg>

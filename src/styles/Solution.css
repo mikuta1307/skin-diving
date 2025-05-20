@@ -1,0 +1,101 @@
+/* Solution.css */
+.solution {
+  background-color: var(--white);
+  padding: var(--space-xl) 0;
+}
+
+.solution-title {
+  text-align: center;
+  color: var(--primary-dark);
+  margin-bottom: var(--space-lg);
+}
+
+.solution-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.solution-feature {
+  text-align: center;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background-color: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.solution-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.solution-feature-icon {
+  margin-bottom: var(--space-md);
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-md);
+}
+
+.solution-feature-title {
+  color: var(--primary);
+  margin-bottom: var(--space-sm);
+  font-size: 1.5rem;
+}
+
+.solution-feature-text {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.solution-cta {
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+
+/* アニメーション */
+.solution-feature {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.solution-feature.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ディレイを付ける */
+.solution-feature:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.solution-feature:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.solution-feature:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+@media (max-width: 1199px) {
+  .solution-features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .solution-features {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .solution-feature-title {
+    font-size: 1.25rem;
+  }
+  
+  .solution-feature-text {
+    font-size: 0.875rem;
+  }
+}

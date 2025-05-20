@@ -1,0 +1,160 @@
+/* TargetSelector.css - サイズ揃え修正版 */
+.target-selector-section {
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: var(--space-md) 0;
+  color: var(--white);
+  position: relative;
+}
+
+/* 背景に波紋のような装飾 */
+.target-selector-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10.5%);
+  background-size: 20px 20px;
+  opacity: 0.3;
+}
+
+.target-selector-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  position: relative;
+  z-index: 2;
+}
+
+.target-selector-content h3 {
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.target-selector-buttons {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.target-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 追加: 縦方向の中央揃え */
+  padding: var(--space-sm) var(--space-md);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  text-decoration: none;
+  transition: var(--transition);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  width: 120px; /* 追加: 固定幅 */
+  height: 100px; /* 追加: 固定高さ */
+}
+
+.target-button:before {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.target-button:nth-child(1):before {
+  content: '🌊'; /* 初心者は波のアイコン */
+}
+
+.target-button:nth-child(2):before {
+  content: '🏊'; /* 中級者は泳ぐ人のアイコン */
+}
+
+.target-button:nth-child(3):before {
+  content: '🏆'; /* 上級者はトロフィーのアイコン */
+}
+
+/* ボタンにきらめき効果 */
+.target-button:after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.target-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.target-button:hover:after {
+  opacity: 1;
+  transform: rotate(45deg) translate(50%, 50%);
+}
+
+.target-button.active {
+  background-color: var(--white);
+  color: var(--primary);
+  font-weight: bold;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+}
+
+.target-button small {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-top: 4px;
+  text-align: center; /* 追加: テキスト中央揃え */
+  line-height: 1.2; /* 追加: 行の高さを調整 */
+  display: block; /* 追加: ブロック要素として表示 */
+  width: 100%; /* 追加: 幅を100%に */
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.target-selector-section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@media (max-width: 767px) {
+  .target-selector-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .target-selector-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .target-button {
+    width: 90px; /* 修正: モバイルでの幅を調整 */
+    height: 90px; /* 修正: モバイルでの高さを調整 */
+    font-size: 0.875rem;
+    padding: var(--space-xs) var(--space-sm);
+  }
+  
+  .target-button:before {
+    font-size: 1.25rem;
+  }
+  
+  .target-button small {
+    font-size: 0.625rem; /* 修正: モバイルでのフォントサイズ縮小 */
+  }
+}

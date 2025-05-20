@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景円 -->
+  <circle cx="40" cy="40" r="35" fill="#00B2FF" opacity="0.1"/>
+  <!-- 品質保証の盾 -->
+  <path d="M40 15C50 25 60 25 65 25C65 45 60 65 40 75C20 65 15 45 15 25C20 25 30 25 40 15Z" stroke="#005F99" stroke-width="3" fill="none"/>
+  <!-- 星マーク -->
+  <path d="M40 25L43 35H53L45 40L48 50L40 45L32 50L35 40L27 35H37L40 25Z" fill="#00B2FF"/>
+  <!-- 1週間経っても品質保証 -->
+  <circle cx="50" cy="55" r="15" fill="#005F99" opacity="0.2"/>
+  <text x="50" y="57" font-family="Arial, sans-serif" font-size="10" fill="#005F99" text-anchor="middle">高品質</text>
+</svg>

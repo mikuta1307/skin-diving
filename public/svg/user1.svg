@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景円 -->
+  <circle cx="100" cy="100" r="100" fill="#E6F3FF"/>
+  
+  <!-- 顔の輪郭 -->
+  <circle cx="100" cy="90" r="50" fill="#FFD7BB"/>
+  
+  <!-- 髪 -->
+  <path d="M50 90C50 62.3858 72.3858 40 100 40C127.614 40 150 62.3858 150 90C150 97.5 148 105 145 110C140 115 130 120 100 120C70 120 60 115 55 110C52 105 50 97.5 50 90Z" fill="#663300"/>
+  
+  <!-- 目 -->
+  <ellipse cx="80" cy="85" rx="5" ry="7" fill="#333333"/>
+  <ellipse cx="120" cy="85" rx="5" ry="7" fill="#333333"/>
+  
+  <!-- 眉毛 -->
+  <path d="M75 75C75 75 80 73 85 75" stroke="#333333" stroke-width="2" stroke-linecap="round"/>
+  <path d="M115 75C115 75 120 73 125 75" stroke="#333333" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- 鼻 -->
+  <path d="M100 90L95 100L105 100Z" fill="#FFCCBB"/>
+  
+  <!-- 口 -->
+  <path d="M90 105C90 105 95 115 110 105" stroke="#CC6666" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- 肩 -->
+  <path d="M70 150C70 150 85 140 100 140C115 140 130 150 130 150" stroke="#0066CC" stroke-width="30" stroke-linecap="round"/>
+  
+  <!-- マスク -->
+  <path d="M60 165C60 165 85 180 100 180C115 180 140 165 140 165" stroke="#0099FF" stroke-width="10" stroke-linecap="round"/>
+</svg>

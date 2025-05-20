@@ -1,0 +1,140 @@
+/* Footer.css */
+.footer {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: var(--space-xl) 0 var(--space-lg);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-title {
+  font-size: 2rem;
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.footer-cta {
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+.footer-cta .btn {
+  background-color: var(--accent);
+  color: var(--white);
+  font-weight: bold;
+  padding: var(--space-md) var(--space-lg);
+  font-size: 1.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-cta .btn:hover {
+  background-color: var(--accent-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer-form {
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: var(--space-xl);
+}
+
+.footer-form-title {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.footer-form-input {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.footer-form-input input {
+  flex: 1;
+  padding: var(--space-sm);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+}
+
+.footer-form-input .btn {
+  white-space: nowrap;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.footer-link {
+  color: var(--gray-light);
+  transition: var(--transition);
+}
+
+.footer-link:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--space-md);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--gray-light);
+}
+
+/* モバイル固定CTA */
+.mobile-fixed-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-sm);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.mobile-fixed-cta .btn {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .footer-title {
+    font-size: 1.5rem;
+  }
+  
+  .footer-cta .btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .footer-form-input {
+    flex-direction: column;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+  
+  .mobile-fixed-cta {
+    display: block;
+  }
+  
+  .footer {
+    padding-bottom: calc(var(--space-lg) + 60px); /* モバイル固定CTAの高さ分余白を追加 */
+  }
+}

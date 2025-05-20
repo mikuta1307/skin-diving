@@ -1,0 +1,118 @@
+/* Problem.css */
+.problem {
+  background-color: var(--gray-light);
+  padding: var(--space-xl) 0;
+}
+
+.problem-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.problem-content {
+  flex: 1;
+}
+
+.problem-title {
+  color: var(--primary-dark);
+  margin-bottom: var(--space-lg);
+  font-size: 2.25rem;
+}
+
+.problem-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.problem-image img {
+  max-width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.problem-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.problem-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: var(--space-sm);
+}
+
+.problem-item:before {
+  content: "□";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.problem-item.checked:before {
+  content: "☑";
+  color: var(--primary);
+}
+
+/* アニメーション */
+.problem-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.problem-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ディレイを付ける */
+.problem-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.problem-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.problem-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.problem-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+@media (max-width: 1199px) {
+  .problem-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .problem-container {
+    flex-direction: column-reverse;
+    gap: var(--space-md);
+  }
+  
+  .problem-title {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  
+  .problem-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .problem-image {
+    margin-bottom: var(--space-md);
+  }
+  
+  .problem-image img {
+    max-width: 80%;
+  }
+}

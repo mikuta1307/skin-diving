@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景円 -->
+  <circle cx="40" cy="40" r="35" fill="#00B2FF" opacity="0.1"/>
+  <!-- スノーケルの形状 -->
+  <path d="M30 60C30 50 30 40 30 30C30 25 35 20 40 20C45 20 50 25 50 30" stroke="#005F99" stroke-width="3" fill="none"/>
+  <!-- スノーケルの先端部分 -->
+  <path d="M50 30L60 30L60 40" stroke="#005F99" stroke-width="3" fill="none"/>
+  <!-- マウスピース部分 -->
+  <path d="M25 60H35V65H25V60Z" fill="#005F99" opacity="0.5" stroke="#005F99" stroke-width="2"/>
+  <!-- 重要ポイントの強調 -->
+  <circle cx="60" cy="40" r="10" fill="#00B2FF" opacity="0.8"/>
+  <text x="60" y="45" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="white" text-anchor="middle">2</text>
+</svg>

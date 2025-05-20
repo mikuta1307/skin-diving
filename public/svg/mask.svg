@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="600" height="400" fill="#F5F7FA"/>
+  
+  <!-- マスクのフレーム部分 - 正面から見た形状 -->
+  <path d="M190 170C190 130 250 110 300 110C350 110 410 130 410 170C410 185 400 205 380 215C350 225 250 225 220 215C200 205 190 185 190 170Z" fill="#333333" stroke="#222222" stroke-width="1.5"/>
+  
+  <!-- パープルのアクセント部分 -->
+  <path d="M195 170C195 135 252 115 300 115C348 115 405 135 405 170C405 183 395 200 377 210C350 218 250 218 223 210C205 200 195 183 195 170Z" fill="none" stroke="#9966CC" stroke-width="3"/>
+  
+  <!-- 一体型レンズ -->
+  <path d="M210 170C210 145 260 130 300 130C340 130 390 145 390 170C390 183 380 195 365 202C340 210 260 210 235 202C220 195 210 183 210 170Z" fill="#FFFFFF" opacity="0.9" stroke="#CCCCCC" stroke-width="1"/>
+  
+  <!-- 鼻部分 -->
+  <path d="M275 195L300 225L325 195" fill="#333333" stroke="#222222" stroke-width="1.5"/>
+  <path d="M290 195H310V225C310 230 290 230 290 225V195Z" fill="#333333" stroke="#222222" stroke-width="1.5"/>
+  
+  <!-- マスク内部のテクスチャ -->
+  <path d="M230 160C230 160 260 154 300 154C340 154 370 160 370 160" stroke="#444444" stroke-width="0.5" stroke-dasharray="2 1" opacity="0.5"/>
+  <path d="M230 175C230 175 260 182 300 182C340 182 370 175 370 175" stroke="#444444" stroke-width="0.5" stroke-dasharray="2 1" opacity="0.5"/>
+  
+  <!-- マスクのストラップ - 横に出ている部分 -->
+  <path d="M410 170C430 170 450 175 460 180C465 183 470 185 475 185" stroke="#333333" stroke-width="6" stroke-linecap="round"/>
+  <path d="M190 170C170 170 150 175 140 180C135 183 130 185 125 185" stroke="#333333" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- ストラップの調整バックル -->
+  <rect x="480" y="180" width="15" height="10" rx="2" fill="#9966CC" stroke="#000000" stroke-width="1"/>
+  <rect x="105" y="180" width="15" height="10" rx="2" fill="#9966CC" stroke="#000000" stroke-width="1"/>
+  
+  <!-- レンズの反射 -->
+  <path d="M270 150C270 148 290 145 310 145C330 145 350 148 350 150C350 152 330 155 310 155C290 155 270 152 270 150Z" fill="#FFFFFF" opacity="0.4"/>
+  
+  <!-- 文字による詳細説明 -->
+  <text x="300" y="300" font-family="Arial, sans-serif" font-size="16" fill="#0066CC" text-anchor="middle">ダイビングマスク詳細図</text>
+  <text x="300" y="330" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">一体型強化テンパードガラスレンズで広々とした視界を確保</text>
+  <text x="300" y="350" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">パープルのアクセントが特徴のスタイリッシュなデザイン</text>
+  <text x="300" y="370" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">人間工学に基づいた設計で快適なフィット感を実現</text>
+</svg>

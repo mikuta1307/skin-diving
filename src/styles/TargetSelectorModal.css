@@ -1,0 +1,219 @@
+/* TargetSelectorModal.css - サイズ揃え修正版 */
+/* オーバーレイ - モーダルの背景 */
+.target-selector-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* モーダル本体 */
+.target-selector-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  padding: var(--space-lg);
+  z-index: 1001;
+  animation: scaleIn 0.3s ease-out;
+}
+
+/* モーダルヘッダー */
+.target-selector-modal h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: var(--space-sm);
+  font-size: 1.75rem;
+}
+
+.target-selector-modal p {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--text);
+  opacity: 0.8;
+}
+
+/* 閉じるボタン */
+.target-selector-close {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--gray-light);
+  border: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.target-selector-close:hover {
+  background: var(--gray);
+}
+
+/* ボタンコンテナ */
+.target-selector-modal-buttons {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  justify-content: center; /* 追加: 水平方向の中央揃え */
+}
+
+/* 選択ボタン */
+.target-modal-button {
+  flex: 1;
+  max-width: 160px; /* 追加: 最大幅を設定 */
+  min-width: 160px; /* 追加: 最小幅を設定 */
+  height: 180px; /* 追加: 高さを固定 */
+  background: var(--gray-light);
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 追加: 縦方向の中央揃え */
+}
+
+.target-modal-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.target-modal-button.active {
+  border-color: var(--primary);
+  background-color: rgba(0, 95, 153, 0.05);
+}
+
+.target-modal-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.target-modal-title {
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin-bottom: var(--space-xs);
+  color: var(--primary);
+}
+
+.target-modal-subtitle {
+  font-size: 0.875rem;
+  opacity: 0.7;
+  line-height: 1.2; /* 追加: 行の高さを調整 */
+  padding: 0 var(--space-xs); /* 追加: 左右の余白を追加 */
+}
+
+/* フッター */
+.target-selector-modal-footer {
+  text-align: center;
+}
+
+.target-selector-skip {
+  background: none;
+  border: none;
+  color: var(--gray-dark);
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: var(--space-xs) var(--space-sm);
+  transition: var(--transition);
+}
+
+.target-selector-skip:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* フローティングボタン */
+.target-selector-float-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: var(--transition);
+}
+
+.target-selector-float-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.target-selector-float-text {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@media (max-width: 767px) {
+  .target-selector-modal {
+    padding: var(--space-md);
+    width: 95%;
+  }
+  
+  .target-selector-modal-buttons {
+    flex-direction: column;
+    gap: var(--space-sm);
+    align-items: center; /* 追加: 中央揃え */
+  }
+  
+  .target-modal-button {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--space-sm);
+    height: auto; /* 修正: 高さを自動に */
+    min-height: 80px; /* 追加: 最小高さを設定 */
+    width: 100%; /* 修正: 幅を100%に */
+    max-width: 100%; /* 修正: 最大幅を100%に */
+  }
+  
+  .target-modal-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0;
+    margin-right: var(--space-sm);
+    flex-shrink: 0; /* 追加: アイコンのサイズを維持 */
+  }
+  
+  .target-modal-content {
+    text-align: left;
+    flex: 1; /* 追加: 残りのスペースを埋める */
+  }
+}

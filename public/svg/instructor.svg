@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景円 -->
+  <circle cx="150" cy="150" r="150" fill="#E6F3FF"/>
+  
+  <!-- 顔の輪郭 -->
+  <circle cx="150" cy="120" r="70" fill="#FFD7BB"/>
+  
+  <!-- 髪 -->
+  <path d="M80 110C80 70 110 50 150 50C190 50 220 70 220 110V120C220 120 200 110 150 110C100 110 80 120 80 120V110Z" fill="#663300"/>
+  <path d="M85 70C85 70 110 55 150 55C190 55 215 70 215 70" stroke="#331800" stroke-width="7"/>
+  
+  <!-- 目 -->
+  <ellipse cx="125" cy="115" rx="8" ry="10" fill="#333333"/>
+  <ellipse cx="175" cy="115" rx="8" ry="10" fill="#333333"/>
+  
+  <!-- 眉毛 -->
+  <path d="M115 100C115 100 125 95 135 100" stroke="#333333" stroke-width="3" stroke-linecap="round"/>
+  <path d="M165 100C165 100 175 95 185 100" stroke="#333333" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- 鼻 -->
+  <path d="M150 120L140 140L160 140Z" fill="#FFBBAA"/>
+  
+  <!-- 口とあごひげ -->
+  <path d="M130 150C130 150 140 165 170 150" stroke="#CC6666" stroke-width="3" stroke-linecap="round"/>
+  <path d="M125 160C125 160 140 180 175 160" stroke="#663300" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 3"/>
+  
+  <!-- 専門家の服装 -->
+  <rect x="100" y="200" width="100" height="80" rx="10" fill="#005F99"/>
+  <rect x="125" y="190" width="50" height="20" rx="5" fill="white"/>
+  <path d="M100 220H200" stroke="white" stroke-width="2"/>
+  
+  <!-- 専門家の装飾品 -->
+  <circle cx="150" cy="210" r="5" fill="#005F99"/>
+  <rect x="130" y="220" width="40" height="10" rx="2" fill="white"/>
+  <path d="M120 250C120 250 130 235 150 235C170 235 180 250 180 250" stroke="white" stroke-width="2"/>
+  
+  <!-- ダイビングの専門性を表す小物 -->
+  <circle cx="230" cy="260" r="20" fill="#00B2FF" fill-opacity="0.5"/>
+  <path d="M220 260C220 255 225 250 230 250C235 250 240 255 240 260C240 265 235 270 230 270C225 270 220 265 220 260Z" fill="white" fill-opacity="0.7"/>
+  <path d="M230 270V280" stroke="white" stroke-width="2"/>
+  <path d="M225 275H235" stroke="white" stroke-width="2"/>
+</svg>

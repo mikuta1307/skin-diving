@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 円形のバッジ背景 -->
+  <circle cx="60" cy="60" r="55" fill="#005F99" opacity="0.1" stroke="#005F99" stroke-width="2"/>
+  <!-- 星型のアイコン -->
+  <path d="M60 20L68.2 45.5H95L73.4 61.5L81.6 87L60 71L38.4 87L46.6 61.5L25 45.5H51.8L60 20Z" fill="#005F99"/>
+  <!-- テキスト -->
+  <text x="60" y="100" font-family="Arial, sans-serif" font-weight="bold" font-size="12" fill="#005F99" text-anchor="middle">プロ推奨品質</text>
+</svg>

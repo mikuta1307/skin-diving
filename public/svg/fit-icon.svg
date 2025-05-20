@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景円 -->
+  <circle cx="40" cy="40" r="35" fill="#00B2FF" opacity="0.1"/>
+  <!-- マスクの形状 -->
+  <path d="M20 30C20 25 30 20 40 20C50 20 60 25 60 30V40C60 45 50 50 40 50C30 50 20 45 20 40V30Z" stroke="#005F99" stroke-width="3" fill="none"/>
+  <!-- マスクのストラップ -->
+  <path d="M20 30C15 30 10 35 10 40" stroke="#005F99" stroke-width="2"/>
+  <path d="M60 30C65 30 70 35 70 40" stroke="#005F99" stroke-width="2"/>
+  <!-- チェックマーク -->
+  <path d="M35 38L40 43L50 33" stroke="#00B2FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

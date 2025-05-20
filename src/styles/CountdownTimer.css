@@ -1,0 +1,84 @@
+/* CountdownTimer.css */
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-number {
+  background-color: var(--white);
+  color: var(--accent);
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.countdown-number:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.countdown-label {
+  margin-top: var(--space-xs);
+  font-size: 0.75rem;
+  color: var(--white);
+}
+
+/* フリップアニメーション */
+@keyframes flipTop {
+  0% {
+    transform: perspective(400px) rotateX(0);
+  }
+  100% {
+    transform: perspective(400px) rotateX(-90deg);
+  }
+}
+
+@keyframes flipBottom {
+  0% {
+    transform: perspective(400px) rotateX(90deg);
+  }
+  100% {
+    transform: perspective(400px) rotateX(0deg);
+  }
+}
+
+.flip-top {
+  animation: flipTop 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+.flip-bottom {
+  animation: flipBottom 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation-delay: 0.5s;
+}
+
+@media (max-width: 767px) {
+  .countdown-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .countdown-label {
+    font-size: 0.625rem;
+  }
+}
