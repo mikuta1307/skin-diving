@@ -1,5 +1,6 @@
 // EquipmentPoints.js
 import React, { useEffect, useRef } from 'react';
+import { getAssetPath } from '../utils/assetPath';
 
 const EquipmentPoints = ({ targetUser }) => {
   const pointsRef = useRef(null);
@@ -48,64 +49,64 @@ const EquipmentPoints = ({ targetUser }) => {
       case 'intermediate':
         return [
           {
-            icon: '/svg/mask-icon.svg',
+            icon: getAssetPath('/svg/mask-icon.svg'),
             title: 'マスク',
             text: '広視界と長時間の快適性を両立。顔にフィットするシリコン素材のものを選び、水漏れを防ぎながら視界を確保しましょう。',
-            image: '/svg/mask.svg'
+            image: getAssetPath('/svg/mask.svg')
           },
           {
-            icon: '/svg/snorkel-icon.svg',
+            icon: getAssetPath('/svg/snorkel-icon.svg'),
             title: 'スノーケル',
             text: '呼吸の抵抗が少なく、パージバルブ付きのモデルが理想的。水の侵入を最小限に抑え、排水が簡単なものを選びましょう。',
-            image: '/svg/snorkel.svg'
+            image: getAssetPath('/svg/snorkel.svg')
           },
           {
-            icon: '/svg/fins-icon.svg',
+            icon: getAssetPath('/svg/fins-icon.svg'),
             title: 'フィン',
             text: '適度な硬さと柔軟性を持ったミディアムブレードが推奨。長時間使用しても疲れにくく、推進力の高いモデルを選びましょう。',
-            image: '/svg/fins.svg'
+            image: getAssetPath('/svg/fins.svg')
           }
         ];
       case 'advanced':
         return [
           {
-            icon: '/svg/mask-icon.svg',
+            icon: getAssetPath('/svg/mask-icon.svg'),
             title: 'マスク',
             text: '低容積で水の抵抗を減らし、視界を最大化する設計。顔の形に合わせたカスタムフィットが重要で、競技用の高品質モデルを選びましょう。',
-            image: '/svg/mask.svg'
+            image: getAssetPath('/svg/mask.svg')
           },
           {
-            icon: '/svg/snorkel-icon.svg',
+            icon: getAssetPath('/svg/snorkel-icon.svg'),
             title: 'スノーケル',
             text: '競技用に設計された低抵抗モデル。呼吸効率を最大化し、水の侵入を完全に防ぐドライトップタイプが理想的です。',
-            image: '/svg/snorkel.svg'
+            image: getAssetPath('/svg/snorkel.svg')
           },
           {
-            icon: '/svg/fins-icon.svg',
+            icon: getAssetPath('/svg/fins-icon.svg'),
             title: 'フィン',
             text: 'カーボンファイバーなど高剛性素材で、最大の推進力を実現。足のサイズと筋力に合った硬さを選び、長時間の使用でもパフォーマンスを維持できるものを。',
-            image: '/svg/fins.svg'
+            image: getAssetPath('/svg/fins.svg')
           }
         ];
       default: // beginner
         return [
           {
-            icon: '/svg/mask-icon.svg',
+            icon: getAssetPath('/svg/mask-icon.svg'),
             title: 'マスク',
             text: '顔にフィットするものを。漏水の原因になるため、サイズ選びが最も重要です。試着して確認しましょう。',
-            image: '/svg/mask.svg'
+            image: getAssetPath('/svg/mask.svg')
           },
           {
-            icon: '/svg/snorkel-icon.svg',
+            icon: getAssetPath('/svg/snorkel-icon.svg'),
             title: 'スノーケル',
             text: '呼吸のしやすさを重視。シンプルな構造のものから始めて、慣れてきたら機能的なモデルにステップアップしましょう。',
-            image: '/svg/snorkel.svg'
+            image: getAssetPath('/svg/snorkel.svg')
           },
           {
-            icon: '/svg/fins-icon.svg',
+            icon: getAssetPath('/svg/fins-icon.svg'),
             title: 'フィン',
             text: 'サイズと硬さが重要。初心者は柔らかめのフィンから始めると足への負担が少なく、長く使えます。',
-            image: '/svg/fins.svg'
+            image: getAssetPath('/svg/fins.svg')
           }
         ];
     }

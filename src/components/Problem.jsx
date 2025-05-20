@@ -1,5 +1,6 @@
 // Problem.js
 import React, { useEffect, useRef } from 'react';
+import { getAssetPath } from '../utils/assetPath';
 
 const Problem = ({ targetUser }) => {
   const problemRef = useRef(null);
@@ -43,7 +44,7 @@ const Problem = ({ targetUser }) => {
             '視界や呼吸のしやすさをもっと改善したい',
             '耐久性の高い本格的な装備が必要'
           ],
-          imageSrc: '/svg/worry-icon.svg'
+          imageSrc: getAssetPath('/svg/worry-icon.svg')
         };
       case 'advanced':
         return {
@@ -54,7 +55,7 @@ const Problem = ({ targetUser }) => {
             'より深く、より長く潜れる装備を探している',
             '競技レベルの品質を求めている'
           ],
-          imageSrc: '/svg/worry-icon.svg'
+          imageSrc: getAssetPath('/svg/worry-icon.svg')
         };
       default: // beginner
         return {
@@ -65,7 +66,7 @@ const Problem = ({ targetUser }) => {
             '自分の顔や足に合うか不安',
             '最初からプロ用は必要？'
           ],
-          imageSrc: '/svg/worry-icon.svg'
+          imageSrc: getAssetPath('/svg/worry-icon.svg')
         };
     }
   };

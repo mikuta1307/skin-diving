@@ -1,6 +1,7 @@
 // ProductSelection.js
 import React, { useState, useEffect, useRef } from 'react';
 import Product from './Product';
+import { getAssetPath } from '../utils/assetPath';
 
 const ProductSelection = ({ targetUser }) => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -46,7 +47,7 @@ const ProductSelection = ({ targetUser }) => {
             type: 'economy',
             name: 'ステップアップスタンダードセット',
             price: '¥25,000前後',
-            image: '/svg/economy-set.svg',
+            image: getAssetPath('/svg/economy-set.svg'),
             features: [
               '中級者向けの基本性能',
               'フィット感が向上した設計',
@@ -59,7 +60,7 @@ const ProductSelection = ({ targetUser }) => {
             type: 'standard',
             name: '快適性重視プレミアムセット',
             price: '¥35,000前後',
-            image: '/svg/standard-set.svg',
+            image: getAssetPath('/svg/standard-set.svg'),
             features: [
               '長時間の快適性を追求',
               '視界の広い高品質マスク',
@@ -72,7 +73,7 @@ const ProductSelection = ({ targetUser }) => {
             type: 'premium',
             name: 'プロフェッショナルセット',
             price: '¥45,000前後',
-            image: '/svg/premium-set.svg',
+            image: getAssetPath('/svg/premium-set.svg'),
             features: [
               'プロも愛用するハイエンドモデル',
               'カーボン製の軽量かつ強力なフィン',
@@ -88,7 +89,7 @@ const ProductSelection = ({ targetUser }) => {
             type: 'economy',
             name: 'トレーニング用ハイスペックセット',
             price: '¥40,000前後',
-            image: '/svg/premium-set.svg',
+            image: getAssetPath('/svg/premium-set.svg'),
             features: [
               '日常練習向けの高性能モデル',
               '軽量で長時間使用が快適',
@@ -101,7 +102,7 @@ const ProductSelection = ({ targetUser }) => {
             type: 'standard',
             name: 'プロフェッショナルセット',
             price: '¥55,000前後',
-            image: '/svg/premium-set.svg',
+            image: getAssetPath('/svg/premium-set.svg'),
             features: [
               '競技レベルの性能',
               'カスタムフィット可能な設計',
@@ -114,7 +115,7 @@ const ProductSelection = ({ targetUser }) => {
             type: 'premium',
             name: 'エリートアスリートモデル',
             price: '¥70,000前後',
-            image: '/svg/premium-set.svg',
+            image: getAssetPath('/svg/premium-set.svg'),
             features: [
               'トッププロ仕様のハイエンドモデル',
               'オーダーメイドレベルのフィット感',
@@ -130,7 +131,7 @@ const ProductSelection = ({ targetUser }) => {
             type: 'economy',
             name: '週末の海を楽しみたい方向け エコノミーセット',
             price: '¥15,000前後',
-            image: '/svg/economy-set.svg',
+            image: getAssetPath('/svg/economy-set.svg'),
             features: [
               '初心者に十分な基本性能',
               '軽量で持ち運びやすい',
@@ -143,7 +144,7 @@ const ProductSelection = ({ targetUser }) => {
             type: 'standard',
             name: '長く使える定番モデル スタンダードセット',
             price: '¥25,000前後',
-            image: '/svg/standard-set.svg',
+            image: getAssetPath('/svg/standard-set.svg'),
             features: [
               '快適な装着感で長時間の使用も快適',
               '耐久性に優れた素材使用',
@@ -156,7 +157,7 @@ const ProductSelection = ({ targetUser }) => {
             type: 'premium',
             name: '本格志向の方向け プレミアムセット',
             price: '¥35,000前後',
-            image: '/svg/premium-set.svg',
+            image: getAssetPath('/svg/premium-set.svg'),
             features: [
               'プロも使用する高品質モデル',
               'フィット感と水中視界を最大化',

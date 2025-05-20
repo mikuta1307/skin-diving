@@ -1,6 +1,7 @@
 // Bonus.js
 import React from 'react';
 import CountdownTimer from './CountdownTimer';
+import { getAssetPath } from '../utils/assetPath';
 
 const Bonus = ({ targetUser }) => {
   // 6月30日までのカウントダウン
@@ -22,33 +23,33 @@ const Bonus = ({ targetUser }) => {
       case 'intermediate':
         return [
           {
-            icon: '/svg/bonus-icon.svg',
+            icon: getAssetPath('/svg/bonus-icon.svg'),
             text: '期間限定：6月中の購入でアップグレードセット送料無料＆25%OFF'
           },
           {
-            icon: '/svg/bonus-icon.svg',
+            icon: getAssetPath('/svg/bonus-icon.svg'),
             text: 'セット購入で専用ネオプレン素材防水バッグをプレゼント'
           }
         ];
       case 'advanced':
         return [
           {
-            icon: '/svg/bonus-icon.svg',
+            icon: getAssetPath('/svg/bonus-icon.svg'),
             text: '期間限定：6月中の購入でプロモデル送料無料＆30%OFF'
           },
           {
-            icon: '/svg/bonus-icon.svg',
+            icon: getAssetPath('/svg/bonus-icon.svg'),
             text: 'エリートモデル購入で競技用カスタムセッティング無料＆防水バッグ付き'
           }
         ];
       default: // beginner
         return [
           {
-            icon: '/svg/bonus-icon.svg',
+            icon: getAssetPath('/svg/bonus-icon.svg'),
             text: '期間限定：6月中の購入で送料無料'
           },
           {
-            icon: '/svg/bonus-icon.svg',
+            icon: getAssetPath('/svg/bonus-icon.svg'),
             text: 'セット購入で防水バッグをプレゼント'
           }
         ];
