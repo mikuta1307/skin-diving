@@ -1,5 +1,6 @@
 // Hero.js
 import React from 'react';
+import { getAssetPath } from '../utils/assetPath';
 
 const Hero = ({ targetUser }) => {
   const getContent = () => {
@@ -31,7 +32,7 @@ const Hero = ({ targetUser }) => {
     <section className="hero" id="hero">
       <img
         //src={`/svg/hero-bg${targetUser !== 'beginner' ? '-' + targetUser : ''}.svg`}
-        src="/svg/hero-bg.svg"
+        src={getAssetPath("/svg/hero-bg.svg")}
         alt="スキンダイビング背景"
         className="hero-bg"
       />
@@ -43,8 +44,8 @@ const Hero = ({ targetUser }) => {
             <a href="#products" className="btn btn-lg">{content.ctaText}</a>
           </div>
           <div className="hero-badges">
-            <img src="/svg/trust-badge1.svg" alt="プロ推奨品質" className="hero-badge" />
-            <img src="/svg/trust-badge2.svg" alt="安心保証付き" className="hero-badge" />
+            <img src={getAssetPath("/svg/trust-badge1.svg")} alt="プロ推奨品質" className="hero-badge" />
+            <img src={getAssetPath("/svg/trust-badge2.svg")} alt="安心保証付き" className="hero-badge" />
           </div>
         </div>
       </div>
