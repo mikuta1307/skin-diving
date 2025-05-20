@@ -5,6 +5,16 @@ const Header = ({ targetUser }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // basePathを取得する関数を追加
+  const getBasePath = () => {
+    // 本番環境（GitHub Pages）ではbasePathを設定
+    if (process.env.NODE_ENV === 'production') {
+      return '/skin-diving';
+    }
+    // 開発環境では空文字列
+    return '';
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
@@ -55,7 +65,7 @@ const Header = ({ targetUser }) => {
     <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
       <div className="container header-container">
         <div className="header-logo">
-          <a href="#"><img src="/svg/logo.svg" alt="スキンダイビングスターターセット" /></a>
+          <a href="#"><img src={`${getBasePath()}/svg/logo.svg`} alt="スキンダイビングスターターセット" /></a>
         </div>
 
         <nav className="nav-links">
