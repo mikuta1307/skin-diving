@@ -17,7 +17,15 @@ import '../styles/TargetSelector.css'; // 通常の選択UI用
 import '../styles/TargetSelectorModal.css'; // モーダル用
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="googlebot" content="noindex, nofollow" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;
