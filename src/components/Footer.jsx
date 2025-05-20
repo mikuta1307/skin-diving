@@ -55,6 +55,7 @@ const Footer = ({ targetUser }) => {
 
         <div className="footer-bottom">
           <p>&copy; {getCurrentYear()} スキンダイビングスターターセット All Rights Reserved.</p>
+          <p>※このサイトは架空のLPであり、実在するサービスではありません。商品の購入や予約はできません。</p>
         </div>
       </div>
 
