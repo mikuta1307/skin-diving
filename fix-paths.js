@@ -4,9 +4,18 @@ const path = require('path');
 const DIST_DIR = path.join(__dirname, 'out');
 const BASE_PATH = '/skin-diving';
 
+// GitHub Pages のときだけ修正を実行
+if (process.env.TARGET_ENV !== 'github') {
+  process.exit(0);
+}
+
 function replaceInFile(filePath) {
   let content = fs.readFileSync(filePath, 'utf-8');
-  content = content.replace(/(["'= \t])\/(svg|_next|images|styles|favicon)/g, `$1${BASE_PATH}/$2`);
+
+  content = content.replace(/(href=|src=|url\()?"\/(svg|_next|images|styles|favicon)/g, (match, prefix = '', folder) => {
+    return `${prefix}"${BASE_PATH}/${folder}`;
+  });
+
   fs.writeFileSync(filePath, content);
 }
 
@@ -22,4 +31,3 @@ function walk(dir) {
 }
 
 walk(DIST_DIR);
-console.log('✅ fix-paths.js: パスの修正が完了しました');
