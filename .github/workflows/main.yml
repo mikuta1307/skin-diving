@@ -28,6 +28,13 @@ jobs:
           
       - name: Install dependencies
         run: npm install  # npm ci の代わりに npm install を使用
+
+      - name: Build and Export
+        run: |
+          export TARGET_ENV=github
+          npm run build
+          npm run export
+          node fix-paths.js
         
       - name: Build and Export
         run: |
