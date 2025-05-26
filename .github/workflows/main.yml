@@ -34,13 +34,8 @@ jobs:
           export TARGET_ENV=github
           export NEXT_PUBLIC_BASE_PATH=/skin-diving
           npm run build
-          npm run export
-          node fix-paths.js
-        
-      - name: Build and Export
-        run: |
-          npm run build
           npm run export || npx next export
+          node fix-paths.js
           touch out/.nojekyll
           
       - name: Setup Pages
