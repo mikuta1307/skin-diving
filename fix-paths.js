@@ -6,7 +6,7 @@ const BASE_PATH = '/skin-diving';
 
 function replaceInFile(filePath) {
   let content = fs.readFileSync(filePath, 'utf-8');
-  content = content.replace(/(["'(= ])\/(svg|_next|images|styles|favicon)/g, `$1${BASE_PATH}/$2`);
+  content = content.replace(/(["'= \t])\/(svg|_next|images|styles|favicon)/g, `$1${BASE_PATH}/$2`);
   fs.writeFileSync(filePath, content);
 }
 
